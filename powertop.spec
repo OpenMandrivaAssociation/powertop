@@ -1,5 +1,5 @@
 %define name powertop
-%define version 1.1
+%define version 1.2
 %define release %mkrel 1
 
 Summary: Power saving diagnostic tool
@@ -22,7 +22,7 @@ update it's display frequently so that the impact of any changes can
 be seen directly.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %make
