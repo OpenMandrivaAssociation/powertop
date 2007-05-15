@@ -1,6 +1,6 @@
 %define name powertop
 %define version 1.2
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Power saving diagnostic tool
 Name: %{name}
@@ -31,6 +31,8 @@ be seen directly.
 rm -rf %{buildroot}
 install -d %{buildroot}%{_bindir}
 install -m755 %{name} %{buildroot}%{_bindir}
+install -d %{buildroot}%{_mandir}/man1
+install -m644 %{name}.1 %{buildroot}%{_mandir}/man1
 
 %clean
 rm -rf %{buildroot}
@@ -39,3 +41,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README Changelog
 %{_bindir}/%{name}
+%{_mandir}/man1/%{name}.1*
