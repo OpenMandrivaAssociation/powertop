@@ -7,6 +7,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://www.linuxpowertop.org/download/%{name}-%{version}.tar.bz2
+Patch0: powertop-1.5-ncursesw.patch
 License: GPL
 Group: System/Kernel and hardware
 Url: http://www.linuxpowertop.org/
@@ -24,6 +25,7 @@ be seen directly.
 
 %prep
 %setup -q
+%patch0 -p1 -b .ncursesw
 
 %build
 %make
