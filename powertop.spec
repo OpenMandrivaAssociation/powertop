@@ -1,5 +1,5 @@
 %define name powertop
-%define version 1.5
+%define version 1.7
 %define release %mkrel 1
 
 Summary: Power saving diagnostic tool
@@ -45,4 +45,3 @@ rm -rf %{buildroot}
 %doc README Changelog
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
-
