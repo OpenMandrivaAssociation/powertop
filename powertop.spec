@@ -1,12 +1,12 @@
 %define name powertop
-%define version 1.7
+%define version 1.8
 %define release %mkrel 1
 
 Summary: Power saving diagnostic tool
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.linuxpowertop.org/download/%{name}-%{version}.tar.bz2
+Source0: http://www.linuxpowertop.org/download/%{name}-%{version}.tar.gz
 Patch0: powertop-1.5-ncursesw.patch
 License: GPL
 Group: System/Kernel and hardware
