@@ -1,6 +1,6 @@
 %define name powertop
 %define version 1.9
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Power saving diagnostic tool
 Name: %{name}
