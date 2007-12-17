@@ -12,7 +12,6 @@ License: GPL
 Group: System/Kernel and hardware
 Url: http://www.linuxpowertop.org/
 BuildRequires: libncursesw-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PowerTOP tool is a program that collects the various pieces of
