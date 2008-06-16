@@ -1,6 +1,6 @@
 %define name powertop
-%define version 1.9
-%define release %mkrel 2
+%define version 1.10
+%define release %mkrel 1
 
 Summary: Power saving diagnostic tool
 Name: %{name}
@@ -8,7 +8,7 @@ Version: %{version}
 Release: %{release}
 Source0: http://www.linuxpowertop.org/download/%{name}-%{version}.tar.gz
 Patch0: powertop-1.5-ncursesw.patch
-License: GPL
+License: GPLv2+
 Group: System/Kernel and hardware
 Url: http://www.linuxpowertop.org/
 BuildRequires: libncursesw-devel
@@ -28,19 +28,18 @@ be seen directly.
 %patch0 -p1 -b .ncursesw
 
 %build
-%make
+%make CFLAGS="%{optflags}"
 
 %install
 rm -rf %{buildroot}
-install -d %{buildroot}%{_bindir}
-install -m755 %{name} %{buildroot}%{_bindir}
-install -d %{buildroot}%{_mandir}/man1
-install -m644 %{name}.1 %{buildroot}%{_mandir}/man1
+%makeinstall_std
+
+%find_lang %name
 
 %clean
 rm -rf %{buildroot}
 
-%files
+%files -f %name.lang
 %defattr(-,root,root)
 %doc README Changelog
 %{_bindir}/%{name}
