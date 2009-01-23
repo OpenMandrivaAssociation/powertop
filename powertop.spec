@@ -1,5 +1,7 @@
+%define Werror_cflags %nil
+
 %define name powertop
-%define version 1.10
+%define version 1.11
 %define release %mkrel 1
 
 Summary: Power saving diagnostic tool
