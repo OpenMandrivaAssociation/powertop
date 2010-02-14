@@ -2,7 +2,7 @@
 
 %define name powertop
 %define version 1.11
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Power saving diagnostic tool
 Name: %{name}
@@ -10,6 +10,7 @@ Version: %{version}
 Release: %{release}
 Source0: http://www.linuxpowertop.org/download/%{name}-%{version}.tar.gz
 Patch0: powertop-1.5-ncursesw.patch
+Patch1: powertop-1.11-increase-config-size.patch
 License: GPLv2+
 Group: System/Kernel and hardware
 Url: http://www.linuxpowertop.org/
@@ -28,6 +29,7 @@ be seen directly.
 %prep
 %setup -q
 %patch0 -p1 -b .ncursesw
+%patch1 -p1
 
 %build
 %make CFLAGS="%{optflags}"
