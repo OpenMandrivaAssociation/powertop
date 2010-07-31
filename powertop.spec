@@ -1,21 +1,16 @@
 %define Werror_cflags %nil
 
-%define name powertop
-%define version 1.11
-%define release %mkrel 3
-
-Summary: Power saving diagnostic tool
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://www.linuxpowertop.org/download/%{name}-%{version}.tar.gz
-Patch0: powertop-1.5-ncursesw.patch
-Patch1: powertop-1.11-increase-config-size.patch
-License: GPLv2+
-Group: System/Kernel and hardware
-Url: http://www.linuxpowertop.org/
-BuildRequires: libncursesw-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Summary:	Power saving diagnostic tool
+Name:		powertop
+Version:	1.13
+Release:	%mkrel 1
+License:	GPLv2+
+Group:		System/Kernel and hardware
+Url:		http://www.linuxpowertop.org/
+Source0:	http://www.lesswatts.org/projects/powertop/download/%{name}-%{version}.tar.gz
+Patch0:		powertop-1.5-ncursesw.patch
+BuildRequires:	libncursesw-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PowerTOP tool is a program that collects the various pieces of
@@ -29,16 +24,16 @@ be seen directly.
 %prep
 %setup -q
 %patch0 -p1 -b .ncursesw
-%patch1 -p1
 
 %build
-%make CFLAGS="%{optflags}"
+%setup_compile_flags
+%make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
 
-%find_lang %name
+%find_lang %{name}
 
 %clean
 rm -rf %{buildroot}
@@ -47,4 +42,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README Changelog
 %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.1*
+%{_mandir}/man8/%{name}.8*
