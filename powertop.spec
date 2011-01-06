@@ -2,14 +2,15 @@
 
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	1.13
+Version:	1.97
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.linuxpowertop.org/
-Source0:	http://www.lesswatts.org/projects/powertop/download/%{name}-%{version}.tar.gz
-Patch0:		powertop-1.5-ncursesw.patch
+Source0:	http://www.kernel.org/pub/linux/status/powertop/%{name}-%{version}.tar.bz2
+Patch0:		powertop-1.97-ncursesw.patch
 BuildRequires:	libncursesw-devel
+BuildRequires:	libnl-devel pciutils-devel zlib-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -40,6 +41,5 @@ rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-,root,root)
-%doc README Changelog
+%doc README
 %{_bindir}/%{name}
-%{_mandir}/man8/%{name}.8*
