@@ -9,6 +9,7 @@ Group:		System/Kernel and hardware
 Url:		http://www.linuxpowertop.org/
 Source0:	http://www.kernel.org/pub/linux/status/powertop/%{name}-%{version}.tar.bz2
 Patch0:		powertop-1.97-ncursesw.patch
+BuildRequires:	libncurses-devel
 BuildRequires:	libncursesw-devel
 BuildRequires:	libnl-devel pciutils-devel zlib-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
