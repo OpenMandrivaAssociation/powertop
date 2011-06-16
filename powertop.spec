@@ -22,7 +22,7 @@ be seen directly.
 
 %prep
 %setup -q
-%patch0 -p1 -b .ncursesw
+%patch0 -p1 -b .ncursesw~
 
 %build
 %setup_compile_flags
