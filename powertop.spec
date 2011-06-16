@@ -33,6 +33,6 @@ be seen directly.
 
 %find_lang %{name}
 
-%files -f %name.lang
-%doc README
+%files -f %{name}.lang
+%doc README TODO
 %{_bindir}/%{name}
