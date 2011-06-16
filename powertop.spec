@@ -1,7 +1,7 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
 Version:	1.98
-Release:	1
+Release:	1.git20110712.1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
