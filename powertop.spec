@@ -1,5 +1,3 @@
-%define Werror_cflags %nil
-
 Summary:	Power saving diagnostic tool
 Name:		powertop
 Version:	1.98
@@ -12,7 +10,6 @@ Patch0:		powertop-1.97-ncursesw.patch
 BuildRequires:	libncurses-devel
 BuildRequires:	libncursesw-devel
 BuildRequires:	libnl-devel pciutils-devel zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PowerTOP tool is a program that collects the various pieces of
@@ -32,15 +29,10 @@ be seen directly.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %name.lang
-%defattr(-,root,root)
 %doc README
 %{_bindir}/%{name}
