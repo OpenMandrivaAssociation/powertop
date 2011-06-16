@@ -2,8 +2,8 @@
 
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	1.97
-Release:	%mkrel 1
+Version:	1.98
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.linuxpowertop.org/
