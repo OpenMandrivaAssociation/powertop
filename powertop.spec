@@ -4,7 +4,7 @@ Version:	1.98
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://www.linuxpowertop.org/
+Url:		http://www.lesswatts.org/
 Source0:	http://www.kernel.org/pub/linux/status/powertop/%{name}-%{version}.tar.bz2
 Patch0:		powertop-1.97-ncursesw.patch
 BuildRequires:	libncurses-devel
