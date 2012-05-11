@@ -1,15 +1,13 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	1.98
-Release:	1.git20110712.1
+Version:	2.0
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
-Source0:	http://www.kernel.org/pub/linux/status/powertop/%{name}-%{version}.tar.bz2
-Patch0:		powertop-1.97-ncursesw.patch
-Patch1:		powertop-1.98-to-git-9f1a713fe3f8befb951ab9163c720cc664895c43.patch
-BuildRequires:	libncurses-devel
-BuildRequires:	libncursesw-devel
+Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.bz2
+BuildRequires:	ncurses-devel
+BuildRequires:	ncursesw-devel
 BuildRequires:	libnl-devel pciutils-devel zlib-devel
 
 %description
@@ -23,11 +21,9 @@ be seen directly.
 
 %prep
 %setup -q
-%patch0 -p1 -b .ncursesw~
-%patch1 -p1 -b .git~
 
 %build
-%setup_compile_flags
+%configure2_5x
 %make
 
 %install
@@ -37,4 +33,4 @@ be seen directly.
 
 %files -f %{name}.lang
 %doc README TODO
-%{_bindir}/%{name}
+%{_sbindir}/%{name}
