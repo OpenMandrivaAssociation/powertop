@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
-Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.bz2
+Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel
 BuildRequires:	ncursesw-devel
 BuildRequires:	libnl-devel
