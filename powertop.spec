@@ -36,3 +36,4 @@ be seen directly.
 %files -f %{name}.lang
 %doc README TODO
 %{_sbindir}/%{name}
+%{_mandir}/man8/powertop.8.*
