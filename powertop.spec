@@ -1,16 +1,16 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.1
+Version:	2.2
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
 Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
-BuildRequires:	ncurses-devel
-BuildRequires:	ncursesw-devel
-BuildRequires:	libnl-devel
-BuildRequires:	pciutils-devel
-BuildRequires:	zlib-devel
+BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(ncursesw)
+BuildRequires:	pkgconfig(libpci)
+BuildRequires:	pkgconfig(libnl-3.0)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 PowerTOP tool is a program that collects the various pieces of
@@ -34,6 +34,6 @@ be seen directly.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README TODO
+%doc COPYING README TODO
 %{_sbindir}/%{name}
-%{_mandir}/man8/powertop.8.*
+%{_mandir}/*/*.*
