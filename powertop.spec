@@ -1,7 +1,7 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.2
-Release:	3
+Version:	2.3
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
@@ -34,6 +34,6 @@ be seen directly.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc COPYING README TODO
+%doc README TODO
 %{_sbindir}/%{name}
 %{_mandir}/*/*.*
