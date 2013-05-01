@@ -1,11 +1,12 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.3
+Version:	2.3.1
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
-Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
+Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.xz
+Patch0:		powertop-2.3-always-create-params.patch
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
@@ -23,6 +24,8 @@ be seen directly.
 
 %prep
 %setup -q
+%patch0 -p1 -b .params~
+./autogen.sh
 
 %build
 %configure2_5x
