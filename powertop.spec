@@ -4,7 +4,7 @@ Version:	2.3.1
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://www.lesswatts.org/
+Url:		http://01.org/powertop/
 Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.xz
 Patch0:		powertop-2.3-always-create-params.patch
 BuildRequires:	pkgconfig(ncurses)
