@@ -12,6 +12,7 @@ BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(libnl-3.0)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	gettext-devel
 
 %description
 PowerTOP tool is a program that collects the various pieces of
