@@ -1,12 +1,17 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.3.1
+Version:	2.5
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://01.org/powertop/
-Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.xz
+Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
 Patch0:		powertop-2.3-always-create-params.patch
+# Sent upstream (http://github.com/fenrus75/powertop/pull/11)
+Patch1:         powertop-2.3-man-fix.patch
+# Sent upstream (http://github.com/fenrus75/powertop/pull/12)
+Patch2:         powertop-2.3-ondemand-check.patch
+
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
@@ -26,6 +31,8 @@ be seen directly.
 %prep
 %setup -q
 %patch0 -p1 -b .params~
+%patch1 -p1 -b .man-fix~
+%patch2 -p1 -b .ondemand-check~
 ./autogen.sh
 
 %build
