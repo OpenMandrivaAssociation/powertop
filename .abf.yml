@@ -1,4 +1,5 @@
 removed_sources:
   powertop-2.3.tar.gz: 0bb26b38a87f45cdb61acc8dc233e4391220c8b4
-sources:
   powertop-2.4.tar.gz: 3a5558a2bec10ff18864e8566bbec90783a8edd7
+sources:
+  powertop-2.5.tar.gz: d385e22a5c7ead3fef3e84532ae2c3a73ae5ca49

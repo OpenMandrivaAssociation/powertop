@@ -1,6 +1,6 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.4
+Version:	2.5
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
