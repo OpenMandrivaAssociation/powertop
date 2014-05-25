@@ -1,11 +1,11 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.5
+Version:	2.6
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.lesswatts.org/
-Source0:	https://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
+Source0:	https://01.org/sites/default/files/downloads/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
@@ -22,9 +22,10 @@ update it's display frequently so that the impact of any changes can
 be seen directly.
 
 %prep
-%setup -q
+%setup -qn %{name}
 
 %build
+autoreconf -fiv
 %configure2_5x
 %make
 
