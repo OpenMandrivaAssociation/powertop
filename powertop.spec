@@ -1,11 +1,16 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.6
-Release:	1
+Version:	2.6.1
+%define	gitdate	20140528
+Release:	1%{?gitdate:.git%{gitdate}.1}
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://www.lesswatts.org/
-Source0:	https://01.org/sites/default/files/downloads/%{name}/%{name}-%{version}.tar.gz
+Url:            http://01.org/powertop/
+Source0:        http://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.xz
+# Sent upstream
+Patch0:		powertop-2.3-always-create-params.patch
+# Sent upstream (http://github.com/fenrus75/powertop/pull/11)
+Patch1:		powertop-2.6.1-man-fix.patch
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(libnl-3.0)
@@ -23,6 +28,7 @@ be seen directly.
 
 %prep
 %setup -q
+%apply_patches
 autoreconf -fiv
 
 %build
