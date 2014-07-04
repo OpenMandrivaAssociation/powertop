@@ -33,7 +33,7 @@ be seen directly.
 autoreconf -fiv
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
