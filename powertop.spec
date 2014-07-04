@@ -11,6 +11,7 @@ Source0:        http://01.org/powertop/sites/default/files/downloads/%{name}-%{v
 Patch0:		powertop-2.3-always-create-params.patch
 # Sent upstream (http://github.com/fenrus75/powertop/pull/11)
 Patch1:		powertop-2.6.1-man-fix.patch
+Patch3:		powertop-2.6.1-tunable-overflow-fix.patch
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(libnl-3.0)
