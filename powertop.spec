@@ -2,11 +2,11 @@ Summary:	Power saving diagnostic tool
 Name:		powertop
 Version:	2.6.1
 %define	gitdate	20140616
-Release:	1%{?gitdate:.git%{gitdate}.1}
+Release:	1%{?gitdate:.git%{gitdate}.2}
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:            http://01.org/powertop/
-Source0:        http://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.%{?gitdate:xz}%{!?gitdate:gz}
+Url:		http://01.org/powertop/
+Source0:	http://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.%{?gitdate:xz}%{!?gitdate:gz}
 # Sent upstream
 Patch0:		powertop-2.3-always-create-params.patch
 # Sent upstream (http://github.com/fenrus75/powertop/pull/11)
@@ -33,6 +33,9 @@ be seen directly.
 autoreconf -fiv
 
 %build
+export CC=gcc
+export CXX=g++
+
 %configure
 %make
 
