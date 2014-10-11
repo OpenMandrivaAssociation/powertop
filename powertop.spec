@@ -33,10 +33,7 @@ be seen directly.
 autoreconf -fiv
 
 %build
-export CC=gcc
-export CXX=g++
-
-%configure
+%configure2_5x
 %make
 
 %install
