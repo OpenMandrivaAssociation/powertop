@@ -1,17 +1,11 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.6.1
-%define	gitdate	20140616
-Release:	1%{?gitdate:.git%{gitdate}.2}
+Version:	2.9
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://01.org/powertop/
-Source0:	http://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.%{?gitdate:xz}%{!?gitdate:gz}
-# Sent upstream
-Patch0:		powertop-2.3-always-create-params.patch
-# Sent upstream (http://github.com/fenrus75/powertop/pull/11)
-Patch1:		powertop-2.6.1-man-fix.patch
-Patch3:		powertop-2.6.1-tunable-overflow-fix.patch
+Source0:	http://01.org/powertop/sites/default/files/downloads/%{name}-v%{version}.tar.gz
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(libnl-3.0)
@@ -28,14 +22,11 @@ update it's display frequently so that the impact of any changes can
 be seen directly.
 
 %prep
-%setup -q
+%setup -qn %{name}-v%{version}
 %apply_patches
-autoreconf -fiv
+find . -name "*.o" -exec rm {} \;
 
 %build
-export CC=gcc
-export CXX=g++
-
 %configure
 %make
 
