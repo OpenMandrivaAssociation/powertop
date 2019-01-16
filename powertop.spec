@@ -1,11 +1,11 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.9
-Release:	2
+Version:	2.10
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://01.org/powertop/
-Source0:	http://01.org/powertop/sites/default/files/downloads/%{name}-v%{version}.tar.gz
+Source0:	https://01.org/sites/default/files/downloads//%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(libnl-3.0)
