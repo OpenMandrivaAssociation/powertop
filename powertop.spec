@@ -1,7 +1,7 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.9
-Release:	2
+Version:	2.10
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://01.org/powertop/
@@ -22,16 +22,15 @@ update it's display frequently so that the impact of any changes can
 be seen directly.
 
 %prep
-%setup -qn %{name}-v%{version}
-%apply_patches
+%autosetup -n %{name}-v%{version} -p1
 find . -name "*.o" -exec rm {} \;
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name}
 
