@@ -39,3 +39,4 @@ find . -name "*.o" -exec rm {} \;
 %doc README TODO
 %{_sbindir}/%{name}
 %{_mandir}/*/*.*
+%{_datadir}/bash-completion/completions/%{name}
