@@ -1,3 +1,5 @@
+%define _disable_rebuild_configure 1
+
 Summary:	Power saving diagnostic tool
 Name:		powertop
 Version:	2.11
