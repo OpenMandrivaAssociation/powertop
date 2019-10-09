@@ -1,5 +1,3 @@
-%define _disable_rebuild_configure 1
-
 Summary:	Power saving diagnostic tool
 Name:		powertop
 Version:	2.11
@@ -28,6 +26,7 @@ be seen directly.
 find . -name "*.o" -exec rm {} \;
 
 %build
+./autogen.sh
 %configure
 %make_build
 
