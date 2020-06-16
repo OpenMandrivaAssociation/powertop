@@ -1,6 +1,6 @@
 Summary:	Power saving diagnostic tool
 Name:		powertop
-Version:	2.11
+Version:	2.13
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
