@@ -4,7 +4,7 @@ Version:	2.13
 Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://01.org/powertop/
+Url:		https://01.org/powertop/
 Source0:	http://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
