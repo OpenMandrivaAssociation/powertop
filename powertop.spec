@@ -6,6 +6,11 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		https://01.org/powertop/
 Source0:	http://01.org/powertop/sites/default/files/downloads/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(libnl-3.0)
