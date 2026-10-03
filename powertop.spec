@@ -27,6 +27,9 @@ indication of which tunables and software components are the biggest
 offenders in slurping up battery time. PowerTOP will update its display
 frequently so that the impact of any changes can be seen directly.
 
+%prep -a
+%autosetup -n powertop-%{version} -p1
+
 %install -a
 %find_lang %{name}
 
