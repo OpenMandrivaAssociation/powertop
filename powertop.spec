@@ -1,14 +1,13 @@
 Summary:	Power saving diagnostic tool
 Name:		  powertop
-Version:	2.16
+Version:	2.16.1
 Release:	1
 License:	GPL-2.0-only
 Group:		System/Kernel and hardware
 Url:		  https://github.com/fenrus75/powertop
 Source0:	https://github.com/fenrus75/powertop/archive/refs/tags/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-# Upstream switched to the meson build system as of 2.16
-# (autotools files are still shipped but are stale/unmaintained).
+# Meson is the only build system. 2.16.1 removed the legacy autoconf files.
 BuildSystem:	meson
 # Upstream installs the binary to bindir; powertop traditionally lives in sbin
 BuildOption:	--bindir=%{_sbindir}
